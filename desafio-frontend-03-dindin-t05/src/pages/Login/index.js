@@ -1,6 +1,6 @@
 import './style.css';
 
-function Main() {
+function Login() {
   return (
     <div>
       <h1>Olá, mundo!</h1>
@@ -8,4 +8,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Login;
