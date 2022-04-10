@@ -1,0 +1,138 @@
+header {
+    margin-bottom: 108px;
+}
+
+header img {
+    margin-top: 41px;
+    margin-left: 100px;
+}
+
+.container {
+    background: url('../../assets/background-image.svg');
+    min-height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container {
+    width: 720px;
+    margin-right: 100px;
+
+}
+
+.register-container h1 {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 62px;
+}
+
+.register-container h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: white;
+}
+
+span {
+    color: #7978D9;
+}
+
+.btn-register {
+    width: 284px;
+    padding: 15px 30px;
+    background-color: #7978D9;
+    border-radius: 5px;
+}
+
+.btn-register .link {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.login-container {
+    width: 513px;
+    height: 480px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container h1 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: #7978D9;
+}
+
+.login-container input {
+    border: 1px solid #555555;
+    border-radius: 5px;
+    width: 449px;
+    height: 63px;
+
+
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-email {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-email input {
+    margin-top: 8px;
+    margin-bottom: 31px;
+}
+
+.container-password {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-password input {
+    margin-top: 8px;
+    margin-bottom: 73px;
+}
+
+.btn-login {
+    background: #7978D9;
+    border-radius: 5px;
+    padding: 18px 47px;
+    width: 449px;
+    color: white;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    margin-bottom: 50px;
+}
+
+button:hover {
+    cursor: pointer;
+}
