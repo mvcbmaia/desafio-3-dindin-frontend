@@ -16,8 +16,8 @@ export default function Login() {
 
     try {
       if (!email || !password) {
-        console.log('O preenchimento de todos os campos é obrigatório!');
-        //Preciso verificar se a mensagem é a mesma da api rest que fizemos
+        console.log('Todos os campos obrigatórios devem ser informados.');
+
         return;
       }
       const response = await api.post('/login', {
@@ -62,7 +62,7 @@ export default function Login() {
       </header>
       <div className='main-container'>
         <div className='register-container'>
-          <h1>Controle suas <span>finanças</span>,sem planilha chata.</h1>
+          <h1>Controle suas <span>finanças</span>, sem planilha chata.</h1>
           <h2>Organizar as suas finanças nunca foi tão fácil, com o DINDIN, você tem tudo num único lugar e em um clique de distância.</h2>
           <button className='btn-register'>
             <Link className='link' to='/usuario'>Cadastre-se</Link>

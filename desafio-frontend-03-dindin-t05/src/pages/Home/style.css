@@ -1,0 +1,44 @@
+header {
+    background: url('../../assets/background-header.svg');
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 116px;
+}
+
+header img {
+    margin-left: 100px;
+    margin-top: 41px;
+    margin-bottom: 58px;
+}
+
+.container-profile {
+    margin-top: 58px;
+    margin-right: 200px;
+    display: flex;
+    width: 138px;
+
+
+}
+
+.container-profile img {
+    margin-top: 5px;
+}
+
+.container-profile h3 {
+    color: white;
+}
+
+.container-information {
+    width: 1440;
+    height: 1024px;
+}
+
+.btn-filter {
+    margin-top: 5px;
+    margin-left: 119px;
+    height: 30px;
+    width: 80px;
+    background-color: white;
+    border-radius: 10px;
+}
