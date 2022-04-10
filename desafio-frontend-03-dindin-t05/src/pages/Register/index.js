@@ -43,7 +43,7 @@ function Register() {
   }
 
   return (
-    <div className='container'>
+        <div className='container'>
       <div className='container-logo'>
         <img src={logo} alt='logo' />
       </div>
@@ -88,8 +88,7 @@ function Register() {
           </form>
         </div>
       </div>
-    </div>
-  );
+     );
 }
 
 export default Register;
