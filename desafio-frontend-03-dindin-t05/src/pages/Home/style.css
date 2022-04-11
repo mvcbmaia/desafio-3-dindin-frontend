@@ -1,3 +1,7 @@
+.container {
+    position: relative;
+}
+
 header {
     background: url('../../assets/background-header.svg');
     display: flex;
@@ -17,8 +21,6 @@ header img {
     margin-right: 200px;
     display: flex;
     width: 138px;
-
-
 }
 
 .container-profile img {
