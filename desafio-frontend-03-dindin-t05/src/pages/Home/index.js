@@ -5,10 +5,13 @@ import ArrowProfile from '../../assets/arrow-profile.svg';
 import Filter from '../../assets/filter.svg';
 import Pen from '../../assets/pen.svg';
 import GarbageCan from '../../assets/garbage-can.svg';
+import ModalAddRegister from '../../components/AddingRegister';
+import ModalEditRegister from '../../components/EditingProfile';
+import EditingProfile from '../../components/EditingProfile';
 
 function Home() {
   return (
-    <div>
+    <div className='container'>
       <header>
         <img src={Logo} alt="logo" />
         <div className='container-profile'>
@@ -98,6 +101,8 @@ function Home() {
           </div>
         </div>
       </div>
+      { /* < ModalAddRegister /> */}
+      < ModalEditRegister />
     </div>
   );
 }

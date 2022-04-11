@@ -19,31 +19,26 @@ function Register() {
         console.log('Todos os campos são os obrigatórios');
         return;
       }
-    } catch (error) {
-      console.log(error.message);
-    }
-    try {
+
       if (password !== confirmPassword) {
         console.log('Os campos de senha precisam ser iguais.')
         return;
       }
-    } catch (error) {
 
-    }
-    try {
       const response = await api.post('/usuario', {
         email,
         name,
         password
       })
+      console.log(response.data)
       navigate('/login');
     } catch (error) {
-
+      console.log(error.message);
     }
   }
 
   return (
-        <div className='container'>
+    <div className='container'>
       <div className='container-logo'>
         <img src={logo} alt='logo' />
       </div>
@@ -88,7 +83,8 @@ function Register() {
           </form>
         </div>
       </div>
-     );
+    </div>
+  );
 }
 
 export default Register;
