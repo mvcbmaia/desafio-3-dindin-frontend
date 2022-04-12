@@ -10,6 +10,11 @@ import Top from '../../assets/top.svg';
 import EditingProfile from '../../components/EditingProfile';
 import EraseItem from '../../components/EraseItem';
 import CategoriesFilter from '../../components/CategoriesFilter';
+<<<<<<< HEAD
+=======
+import AddingRegister from '../../components/AddingRegister';
+import RegisterEditing from '../../components/RegisterEditing';
+>>>>>>> 7fb59ef494b3a5e47e1e5ed9594fd5ac9f4a9a1b
 
 function Home() {
   return (
@@ -88,7 +93,13 @@ function Home() {
         </div>
       </div>
 
+<<<<<<< HEAD
       <EditingProfile />
+=======
+      {/* <EditingProfile /> */}
+      {/* <AddingRegister /> */}
+      {/* <RegisterEditing /> */}
+>>>>>>> 7fb59ef494b3a5e47e1e5ed9594fd5ac9f4a9a1b
 
     </div >
 

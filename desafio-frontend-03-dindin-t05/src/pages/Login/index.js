@@ -26,6 +26,7 @@ export default function Login() {
       });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.log(response);
 
       const { token } = response.data;
@@ -36,6 +37,11 @@ export default function Login() {
       setItem('token', token);
       navigate('/transacao');
 >>>>>>> 088fbc8c49fade43cc1d6c712ec0d528ecf1505e
+=======
+      const { token } = response.data;
+      setItem('token', token);
+      navigate('/transacao');
+>>>>>>> 7fb59ef494b3a5e47e1e5ed9594fd5ac9f4a9a1b
 
       if (!token) {
         return

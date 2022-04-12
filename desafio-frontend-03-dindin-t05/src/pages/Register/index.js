@@ -34,6 +34,7 @@ function Register() {
 
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.log(response.data)
       navigate('/login');
 =======
@@ -41,6 +42,11 @@ function Register() {
       navigate('/login');
 
 >>>>>>> 088fbc8c49fade43cc1d6c712ec0d528ecf1505e
+=======
+
+      navigate('/login');
+
+>>>>>>> 7fb59ef494b3a5e47e1e5ed9594fd5ac9f4a9a1b
     } catch (error) {
       console.log(error.message);
     }
