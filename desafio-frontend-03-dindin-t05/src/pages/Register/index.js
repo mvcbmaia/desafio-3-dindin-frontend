@@ -6,6 +6,7 @@ import api from '../../services/api';
 
 function Register() {
   const navigate = useNavigate()
+
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
@@ -15,6 +16,7 @@ function Register() {
     e.preventDefault();
 
     try {
+
       if (!email || !name || !password || !confirmPassword) {
         console.log('Todos os campos são os obrigatórios');
         return;
@@ -27,11 +29,18 @@ function Register() {
 
       const response = await api.post('/usuario', {
         email,
-        name,
-        password
+        nome: name,
+        senha: password
+
       })
+<<<<<<< HEAD
       console.log(response.data)
       navigate('/login');
+=======
+
+      navigate('/login');
+
+>>>>>>> 088fbc8c49fade43cc1d6c712ec0d528ecf1505e
     } catch (error) {
       console.log(error.message);
     }

@@ -25,11 +25,17 @@ export default function Login() {
         senha: password
       });
 
+<<<<<<< HEAD
       console.log(response);
 
       const { token } = response.data;
       setItem('token', token);
       navigate('/transacao')
+=======
+      const { token } = response.data;
+      setItem('token', token);
+      navigate('/transacao');
+>>>>>>> 088fbc8c49fade43cc1d6c712ec0d528ecf1505e
 
       if (!token) {
         return
