@@ -25,9 +25,9 @@ export default function Login() {
         senha: password
       });
 
-      console.log(response);
-
-      const { token } = response.data.usuario;
+      const { token } = response.data;
+      setItem('token', token);
+      navigate('/transacao');
 
       if (!token) {
         return
@@ -36,12 +36,6 @@ export default function Login() {
       const { id } = response.data.id;
       setItem('token', token);
       navigate('/transacao');
-
-
-
-
-
-
 
     } catch (error) {
       console.log(error.response.data.massage);
