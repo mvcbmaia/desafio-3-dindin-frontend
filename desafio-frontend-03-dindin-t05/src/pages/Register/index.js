@@ -6,6 +6,7 @@ import api from '../../services/api';
 
 function Register() {
   const navigate = useNavigate()
+
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
@@ -15,35 +16,33 @@ function Register() {
     e.preventDefault();
 
     try {
+
       if (!email || !name || !password || !confirmPassword) {
         console.log('Todos os campos são os obrigatórios');
         return;
       }
-    } catch (error) {
-      console.log(error.message);
-    }
-    try {
+
       if (password !== confirmPassword) {
         console.log('Os campos de senha precisam ser iguais.')
         return;
       }
-    } catch (error) {
 
-    }
-    try {
       const response = await api.post('/usuario', {
         email,
-        name,
-        password
-      })
-      navigate('/login');
-    } catch (error) {
+        nome: name,
+        senha: password
 
+      })
+
+      navigate('/login');
+
+    } catch (error) {
+      console.log(error.message);
     }
   }
 
   return (
-        <div className='container'>
+    <div className='container'>
       <div className='container-logo'>
         <img src={logo} alt='logo' />
       </div>
@@ -88,7 +87,8 @@ function Register() {
           </form>
         </div>
       </div>
-     );
+    </div>
+  );
 }
 
 export default Register;

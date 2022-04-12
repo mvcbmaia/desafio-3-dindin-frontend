@@ -1,0 +1,31 @@
+.container-erase-item {
+    height: 46px;
+    width: 111px;
+    background-color: #E4F2FD;
+    border-radius: 4px;
+}
+
+.container-erase-item h5 {
+    margin-left: 14px;
+}
+
+.container-erase-opitions {
+    margin-left:
+        18px;
+}
+
+.btn-erase {
+    height: 15px;
+    width: 37px;
+    border-radius: 4px;
+    color: white;
+    border: none;
+}
+
+.btn-yes {
+    background-color: #3A9FF1;
+}
+
+.btn-no {
+    background-color: #FF576B;
+}
