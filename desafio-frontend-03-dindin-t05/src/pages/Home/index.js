@@ -9,6 +9,8 @@ import Top from '../../assets/top.svg';
 import EditingProfile from '../../components/EditingProfile';
 import EraseItem from '../../components/EraseItem';
 import CategoriesFilter from '../../components/CategoriesFilter';
+import AddingRegister from '../../components/AddingRegister';
+import RegisterEditing from '../../components/RegisterEditing';
 
 function Home() {
   return (
@@ -87,7 +89,9 @@ function Home() {
         </div>
       </div>
 
-      <EditingProfile />
+      {/* <EditingProfile /> */}
+      {/* <AddingRegister /> */}
+      {/* <RegisterEditing /> */}
 
     </div >
 
