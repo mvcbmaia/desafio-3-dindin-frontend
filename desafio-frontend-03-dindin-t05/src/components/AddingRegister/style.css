@@ -81,11 +81,12 @@ form {
     height: 40px;
 
     background: #B9B9B9;
-    border-radius: 0px 10px 1px 0px;
+    border-radius: 0px 10px 10px 0px;
     color: white;
 }
 
 form input {
+    margin-bottom: 0px;
     width: 320px;
     height: 40px;
 }
@@ -107,7 +108,8 @@ form label {
 
 h1 {
     font-family: 'Rubik', sans-serif;
-    font-weight: 700;
+
+    margin-bottom: 25px;
 }
 
 form button {
@@ -121,4 +123,6 @@ form button {
     background: #7978D9;
     border-radius: 5px;
     color: white;
+
+    margin-top: 18px;
 }
