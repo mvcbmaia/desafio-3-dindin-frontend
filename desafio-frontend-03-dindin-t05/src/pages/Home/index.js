@@ -11,7 +11,7 @@ import { getItem } from '../../utils/storage'
 
 function Home() {
   const [openFilter, setOpenFilter] = useState(false);
-  const [transations, setTransitions] = useState([]);
+  const [transations, setTransations] = useState([]);
 
 
   async function handleTrasations() {
@@ -22,7 +22,8 @@ function Home() {
         headers: { Authorization: `Bearer ${token}` }
       })
 
-      console.log(response);
+      setTransations(response.data);
+
 
     } catch (error) {
       console.log(error.message);
@@ -61,7 +62,9 @@ function Home() {
           handleCloseFilter={handleCloseFilter}
         />
         <div className='container-informations'>
-          <Table />
+          <Table
+            transations={transations}
+          />
           <div className='resume'>
             <Resume />
           </div>
