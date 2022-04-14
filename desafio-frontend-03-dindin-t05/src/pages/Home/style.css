@@ -16,11 +16,13 @@
 .container-informations {
     display: flex;
     align-items: flex-start;
+    margin-left: 106px;
 }
 
 .btn-filter {
     margin-top: 5px;
-    margin-left: 50px;
+    margin-left: 106px;
+    margin-bottom: 26px;
     height: 30px;
     width: 80px;
     background-color: white;
@@ -58,4 +60,7 @@
 
 .resume {
     margin-left: 34px;
+    position: absolute;
+    top: 260px;
+    right: 157px;
 }
