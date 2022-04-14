@@ -68,7 +68,7 @@ form {
     width: 150px;
     height: 40px;
 
-    background: #3A9FF1;
+    background-color: #B9B9B9;
     border-radius: 10px 0px 0px 10px;
     color: white;
 }
@@ -80,7 +80,7 @@ form {
     width: 150px;
     height: 40px;
 
-    background: #B9B9B9;
+    background-color: #FF576B;
     border-radius: 0px 10px 10px 0px;
     color: white;
 }

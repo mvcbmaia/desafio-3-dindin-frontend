@@ -10,13 +10,30 @@ import Top from '../../assets/top.svg';
 import EditingProfile from '../../components/EditingProfile';
 import EraseItem from '../../components/EraseItem';
 import CategoriesFilter from '../../components/CategoriesFilter';
-<<<<<<< HEAD
-=======
 import AddingRegister from '../../components/AddingRegister';
 import RegisterEditing from '../../components/RegisterEditing';
->>>>>>> 7fb59ef494b3a5e47e1e5ed9594fd5ac9f4a9a1b
+import { useState } from 'react';
 
 function Home() {
+  const [open, setOpen] = useState(false);
+  const [openFilter, setOpenFilter] = useState(false);
+
+  const handleOpenFilter = () => {
+    setOpenFilter(true);
+  }
+
+  const handleCloseFilter = () => {
+    setOpenFilter(false);
+  }
+
+  const handleOpenModal = () => {
+    setOpen(true);
+  }
+
+  const handleCloseModal = () => {
+    setOpen(false);
+  }
+
   return (
     <div className='container-home'>
       <header className='header-home'>
@@ -28,11 +45,16 @@ function Home() {
         </div>
       </header>
       <div className='container-information'>
-        <button className='btn-filter'>
+        <button
+          onClick={openFilter ? handleCloseFilter : handleOpenFilter}
+          className='btn-filter'>
           <img src={Filter} alt='filter' />
           Filtrar
         </button>
-        {/* <CategoriesFilter /> */}
+        {<CategoriesFilter
+          openFilter={openFilter}
+          handleCloseFilter={handleCloseFilter}
+        />}
         <div className='container-informations'>
           <table className='table'>
 
@@ -68,38 +90,41 @@ function Home() {
             </tbody>
             {/* <EraseItem /> */}
           </table>
-          <div className='resume'>
-            <div className='container-resume'>
-              <div className='container-title'>
-                <h2>Resumo</h2>
+        </div>
+        <div className='resume'>
+          <div className='container-resume'>
+            <div className='container-title'>
+              <h2>Resumo</h2>
+            </div>
+            <div className='numbers'>
+              <div className='container-enter'>
+                <h3>Entradas</h3> <h3 className='value-enter'>R$ 200,00</h3>
               </div>
-              <div className='numbers'>
-                <div className='container-enter'>
-                  <h3>Entradas</h3> <h3 className='value-enter'>R$ 200,00</h3>
-                </div>
-                <div className='container-exit'>
-                  <h3>Entradas</h3> <h3 className='value-exit'>R$70,50</h3>
-                </div>
-                <div className='divide'></div>
-                <div className='container-total'>
-                  <h3>Saldo</h3> <h3 className='value-total'>R$129,50</h3>
-                </div>
+              <div className='container-exit'>
+                <h3>Entradas</h3> <h3 className='value-exit'>R$70,50</h3>
+              </div>
+              <div className='divide'></div>
+              <div className='container-total'>
+                <h3>Saldo</h3> <h3 className='value-total'>R$129,50</h3>
               </div>
             </div>
-
-            <button className='btn-add'>Adicionar Registro</button>
-
           </div>
+
+          <button
+            className='btn-add'
+            onClick={handleOpenModal}
+          >Adicionar Registro</button>
         </div>
+
       </div>
 
-<<<<<<< HEAD
-      <EditingProfile />
-=======
+
       {/* <EditingProfile /> */}
-      {/* <AddingRegister /> */}
+      <AddingRegister
+        open={open}
+        handleCloseModal={handleCloseModal}
+      />
       {/* <RegisterEditing /> */}
->>>>>>> 7fb59ef494b3a5e47e1e5ed9594fd5ac9f4a9a1b
 
     </div >
 
