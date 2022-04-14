@@ -5,10 +5,34 @@ import Filter from '../../assets/filter.svg';
 import CategoriesFilter from '../../components/CategoriesFilter';
 import Table from '../../components/Table';
 import Resume from '../../components/Resume';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import api from '../../services/api';
+import { getItem } from '../../utils/storage'
 
 function Home() {
   const [openFilter, setOpenFilter] = useState(false);
+  const [transations, setTransitions] = useState([]);
+
+
+  async function handleTrasations() {
+    const token = getItem('token');
+
+    try {
+      const response = await api.get('/transacao', {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+
+      console.log(response);
+
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+  useEffect(() => {
+    handleTrasations();
+
+  }, [])
+
 
   const handleOpenFilter = () => {
     setOpenFilter(true);

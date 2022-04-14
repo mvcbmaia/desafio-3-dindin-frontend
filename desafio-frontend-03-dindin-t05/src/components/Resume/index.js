@@ -1,10 +1,15 @@
 import './style.css';
-import { useState } from 'react';
+import { useEffect, useState, } from 'react';
 import AddingRegister from '../AddingRegister';
+import api from '../../services/api';
+import { getItem } from '../../utils/storage';
+
 
 
 function Resume() {
     const [openAddRegirter, setOpenAddRegister] = useState(false);
+    const [enter, setEnter] = useState('');
+    const [exit, setExit] = useState('');
 
     function handleOpenAddRegister() {
         setOpenAddRegister(true);
@@ -14,6 +19,28 @@ function Resume() {
         setOpenAddRegister(false);
     }
 
+    const handleResume = async () => {
+        const token = getItem('token');
+
+        try {
+            const response = await api.get('/transacao/extrato', {
+                headers: { Authorization: `Bearer ${token}` }
+            })
+            setEnter(response.data.entrada)
+            setExit(response.data.saida)
+
+
+        } catch (error) {
+            console.log(error.message);
+        }
+
+    }
+
+    useEffect(() => {
+        handleResume();
+
+    }, [])
+
     return (
         <div>
             <div className='container-resume'>
@@ -22,14 +49,14 @@ function Resume() {
                 </div>
                 <div className='numbers'>
                     <div className='container-enter'>
-                        <h3>Entradas</h3> <h3 className='value-enter'>R$ 200,00</h3>
+                        <h3>Entradas</h3> <h3 className='value-enter'>R${enter}</h3>
                     </div>
                     <div className='container-exit'>
-                        <h3>Saída</h3> <h3 className='value-exit'>R$70,50</h3>
+                        <h3>Saída</h3> <h3 className='value-exit'>R${exit}</h3>
                     </div>
                     <div className='divide'></div>
                     <div className='container-total'>
-                        <h3>Saldo</h3> <h3 className='value-total'>R$129,50</h3>
+                        <h3>Saldo</h3> <h3 className='value-total'>{enter - exit}</h3>
                     </div>
                 </div>
             </div>
