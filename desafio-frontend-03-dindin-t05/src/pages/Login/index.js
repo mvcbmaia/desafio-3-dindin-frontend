@@ -38,7 +38,7 @@ export default function Login() {
       navigate('/transacao');
 
     } catch (error) {
-      console.log(error.response.data.massage);
+      console.log(error.message);
     }
   }
 

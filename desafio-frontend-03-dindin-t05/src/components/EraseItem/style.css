@@ -1,8 +1,24 @@
+.erase-image {
+    position: relative;
+    left: 825px;
+    top: 5px
+}
+
+/* .image {
+    position: absolute;
+    background-color: red;
+    padding-left: 91px;
+    bottom: 3px;
+} */
+
 .container-erase-item {
     height: 46px;
     width: 111px;
     background-color: #E4F2FD;
     border-radius: 4px;
+    position: absolute;
+    left: 735px;
+
 }
 
 .container-erase-item h5 {
@@ -24,6 +40,7 @@
 
 .btn-yes {
     background-color: #3A9FF1;
+    margin-right: 2px;
 }
 
 .btn-no {

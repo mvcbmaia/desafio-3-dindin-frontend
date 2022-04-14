@@ -1,0 +1,15 @@
+.container-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-profile h3 {
+    color: white;
+    margin-right: 16px;
+
+}
+
+img {
+    cursor: pointer;
+}
