@@ -6,22 +6,22 @@
     border-radius: 10px;
 }
 
+
+
 .container-title h2 {
-    width: 72px;
-    height: 21px;
-    left: 1137px;
-    top: 253px;
-
-    font-style: normal;
-    font-weight: 700px;
-    font-size: 18px;
-    line-height: 21px;
-
+    margin-left: 2px;
+    margin-bottom: 23px;
+    margin-top: 0px;
     color: black;
+    font-size: 17px;
 }
 
 .container-resume h3 {
     display: inline-block;
+}
+
+.numbers h3 {
+    font-size: 15px;
 }
 
 .container-exit {
@@ -30,12 +30,12 @@
 
 .value-enter {
     color: #645FFB;
-    margin-left: 20px;
+    margin-left: 80px;
 }
 
 .value-exit {
     color: #FA8C10;
-    margin-left: 20px;
+    margin-left: 103px;
 }
 
 .divide {
@@ -59,7 +59,7 @@
 
 .value-total {
     color: #3A9FF1;
-    margin-left: 45px;
+    margin-left: 102px;
 }
 
 
