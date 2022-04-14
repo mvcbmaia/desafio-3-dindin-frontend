@@ -1,6 +1,18 @@
 import './style.css';
+import { useState } from 'react';
+import AddingRegister from '../AddingRegister';
+
 
 function Resume() {
+    const [openAddRegirter, setOpenAddRegister] = useState(false);
+
+    function handleOpenAddRegister() {
+        setOpenAddRegister(true);
+    }
+
+    function handleCloseAddRegister() {
+        setOpenAddRegister(false);
+    }
 
     return (
         <div>
@@ -21,7 +33,16 @@ function Resume() {
                     </div>
                 </div>
             </div>
-            <button className='btn-add'>Adicionar Registro</button>
+            <button className='btn-add'
+                onClick={handleOpenAddRegister}
+            >
+                Adicionar Registro
+            </button>
+            <AddingRegister
+                openAddRegirter={openAddRegirter}
+                handleCloseAddRegister={handleCloseAddRegister}
+
+            />
         </div>
     )
 }
