@@ -1,7 +1,8 @@
 import './style.css';
 import btnClose from '../../assets/close.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import api from '../../services/api';
+import { getItem } from '../../utils/storage';
 
 function AddingRegister({ openAddRegirter, handleCloseAddRegister }) {
     const [value, setValue] = useState();
@@ -9,38 +10,79 @@ function AddingRegister({ openAddRegirter, handleCloseAddRegister }) {
     const [date, setDate] = useState('');
     const [description, setDescription] = useState('');
     const [type, setType] = useState('saida')
+    const [firstCategory, setFirstCategory] = useState('');
+    const [secondCategory, setSecondCategory] = useState('');
+    const [thirdCategory, setThirdCategory] = useState('');
+    const [fourthCategory, setFourthCategory] = useState('');
+    const [fifthCategory, setFifthCategory] = useState('');
     const btnIn = document.querySelector('.btn-in');
-    const btnOut = document.querySelector('btn-out');
+    const btnOut = document.querySelector('.btn-out');
+    let category_id = '';
 
-    const handleTypeIn = async (e) => {
+    const handleTypeIn = (e) => {
         setType('entrada');
         btnIn.style.background = '#3A9FF1';
         btnOut.style.background = '#B9B9B9';
     }
 
-    const handleTypeOut = async (e) => {
-        setType('saida')
+    const handleTypeOut = (e) => {
+        setType('saida');
         btnIn.style.background = '#B9B9B9';
         btnOut.style.background = '#FF576B';
     }
 
+    const handleCategories = async () => {
+        const token = getItem('token');
+
+        try {
+            const response = await api.get('/categoria', {
+                headers: { Authorization: `Bearer ${token}` }
+            })
+
+            setFirstCategory(response.data[0].descricao);
+            setSecondCategory(response.data[1].descricao);
+            setThirdCategory(response.data[2].descricao);
+            setFourthCategory(response.data[3].descricao);
+            setFifthCategory(response.data[4].descricao);
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+
+    useEffect(() => {
+        handleCategories();
+    }, [])
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const token = getItem('token');
 
         try {
             if (!value || !category || !date || !description) {
                 console.log('Todos os campos são obrigatórios.')
             }
 
+            if (category === 'Lazer') {
+                category_id = 1;
+            } else if (category === 'Salário') {
+                category_id = 2;
+            } else if (category === 'Transporte') {
+                category_id = 3;
+            } else if (category === 'Mercado') {
+                category_id = 4;
+            } else if (category === 'Assinaturas e Serviçoes') {
+                category_id = 5;
+            }
+
             const response = await api.post('/transacao', {
                 valor: value,
-                categoria: category,
+                categoria_id: category_id,
                 data: date,
                 descricao: description,
                 tipo: type
-            })
-
-            console.log(response)
+            }, { headers: { Authorization: `Bearer ${token}` } })
+            handleCloseAddRegister();
         } catch (error) {
             console.log(error.message);
         }
@@ -82,8 +124,11 @@ function AddingRegister({ openAddRegirter, handleCloseAddRegister }) {
                             <div className='input-category'>
                                 <label>Categoria</label>
                                 <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                                    <option>Lazer</option>
-                                    <option>Transporte</option>
+                                    <option>{firstCategory}</option>
+                                    <option>{secondCategory}</option>
+                                    <option>{thirdCategory}</option>
+                                    <option>{fourthCategory}</option>
+                                    <option>{fifthCategory}</option>
                                 </select>
                             </div>
                             <div className='input-date'>

@@ -3,12 +3,20 @@ import Profile from '../../assets/profile.svg';
 import ArrowProfile from '../../assets/arrow-profile.svg';
 import api from '../../services/api';
 import { useEffect, useState } from 'react';
-import { getItem } from '../../utils/storage';
+import { getItem, removeItem } from '../../utils/storage';
 import EditingProfile from '../EditingProfile';
+import { useNavigate } from 'react-router-dom';
 
 function ContainerProfile() {
+    const navigate = useNavigate();
+
     const [name, setName] = useState('');
     const [open, setOpen] = useState(false);
+
+    const logout = () => {
+        removeItem('token');
+        navigate('/login');
+    }
 
     const handleProfileModal = () => {
         setOpen(true)
@@ -41,7 +49,7 @@ function ContainerProfile() {
             <div className='container-profile'>
                 <img src={Profile} onClick={handleProfileModal} alt='profile' />
                 <h3>{name}</h3>
-                <img src={ArrowProfile} alt='arrow' />
+                <img onClick={logout} src={ArrowProfile} alt='arrow' />
             </div>
             <EditingProfile
                 open={open}

@@ -13,7 +13,7 @@
 
 .modal-input {
 
-    width: 611px;
+    width: 610px;
     background-color: white;
     margin: 0 auto;
 
@@ -41,7 +41,6 @@
 .cotainer-informations {
     display: flex;
     flex-direction: column;
-
 }
 
 form input {

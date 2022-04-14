@@ -4,7 +4,7 @@
     background-color: rgba(61, 61, 61, 0.48);
     top: 0;
     right: 0;
-    left: 0;
+    left: 0px;
     bottom: 0;
 
     overflow: auto;
@@ -17,6 +17,9 @@
     background-color: white;
     height: 630px;
     width: 400px;
+    position: relative;
+    left: 350px;
+    bottom: 80px;
 }
 
 form {
@@ -68,7 +71,7 @@ form {
     width: 150px;
     height: 40px;
 
-    background: #3A9FF1;
+    background: #B9B9B9;
     border-radius: 10px 0px 0px 10px;
     color: white;
 }
@@ -80,7 +83,7 @@ form {
     width: 150px;
     height: 40px;
 
-    background: #B9B9B9;
+    background: #FF576B;
     border-radius: 0px 10px 10px 0px;
     color: white;
 }

@@ -27,7 +27,8 @@
     align-items: center;
 
     background-color: white;
-    width: 320px;
+    width: 400px;
+    height: 600px;
 }
 
 .container-register form {
@@ -57,9 +58,9 @@
     flex-direction: column;
 }
 
-input {
+.container-register input {
     width: 240px;
-    height: 30px;
+    height: 40px;
     border: 1px solid #555555;
     border-radius: 5px;
     margin-bottom: 33px;
@@ -72,7 +73,8 @@ input {
     background: #7978D9;
     border-radius: 5px;
     padding: 11px 47px;
-    width: 240px;
+    width: 150px;
+    height: 20px;
     color: white;
 
     font-family: 'Lato', sans-serif;
