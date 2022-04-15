@@ -25,9 +25,14 @@ export default function Login() {
         senha: password
       });
 
-      const { token } = response.data;
+      const { token, usuario: { nome, email: emailUsuario } } = response.data;
       setItem('token', token);
+      setItem('nome', nome);
+      setItem('email', emailUsuario);
+
+      console.log(emailUsuario)
       navigate('/transacao');
+
 
       if (!token) {
         return

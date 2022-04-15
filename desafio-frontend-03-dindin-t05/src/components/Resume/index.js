@@ -49,10 +49,10 @@ function Resume() {
                 </div>
                 <div className='numbers'>
                     <div className='container-enter'>
-                        <h3>Entradas</h3> <h3 className='value-enter'>R${enter}</h3>
+                        <h3>Entradas</h3> <h3 className='value-enter'>R${(enter / 100).toFixed(2)}</h3>
                     </div>
                     <div className='container-exit'>
-                        <h3>Saída</h3> <h3 className='value-exit'>R${exit}</h3>
+                        <h3>Saída</h3> <h3 className='value-exit'>R${(exit / 100).toFixed(2)}</h3>
                     </div>
                     <div className='divide'></div>
                     <div className='container-total'>

@@ -1,6 +1,6 @@
 import './style.css';
 import Close from '../../assets/close.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import api from '../../services/api';
 import { getItem } from '../../utils/storage';
 
@@ -40,6 +40,14 @@ function EditingProfile({ open, handleCloseProfile }) {
         }
     }
 
+    useEffect(() => {
+        setName(getItem('nome'))
+        setEmail(getItem('email'))
+
+        console.log(getItem('email'))
+    }, [])
+
+
 
     return (
         <>
@@ -74,7 +82,6 @@ function EditingProfile({ open, handleCloseProfile }) {
                                     <label>Senha</label>
                                     <input
                                         type='password'
-                                        value={password}
                                         onChange={(e) => setPassword(e)}
                                     />
                                 </div>
@@ -82,7 +89,6 @@ function EditingProfile({ open, handleCloseProfile }) {
                                     <label>Confirmação de Senha</label>
                                     <input
                                         type='password'
-                                        value={confirmPassword}
                                         onChange={(e) => setConfirmPassword(e)}
                                     />
                                 </div>
