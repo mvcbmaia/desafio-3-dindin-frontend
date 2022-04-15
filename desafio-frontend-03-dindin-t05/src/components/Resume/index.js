@@ -56,7 +56,7 @@ function Resume() {
                     </div>
                     <div className='divide'></div>
                     <div className='container-total'>
-                        <h3>Saldo</h3> <h3 className='value-total'>{enter - exit}</h3>
+                        <h3>Saldo</h3> <h3 className='value-total'>R${((enter - exit) / 100).toFixed(2)}</h3>
                     </div>
                 </div>
             </div>
