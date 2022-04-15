@@ -13,6 +13,7 @@ import convertDay from '../../utils/convertDay';
 function Table({ transations }) {
     const [openRegisterEditing, setOpenRegisterEditing] = useState(false);
     const [openEraseItem, setOpenEraseItem] = useState(false);
+    const [id, setId] = useState('');
 
     let categoria = '';
 
@@ -81,26 +82,26 @@ function Table({ transations }) {
                                 </button>
                                 <button
                                     className='btn btn-garbage'
-                                    onClick={handleOpenEraseItem}
+                                    onClick={() => { handleOpenEraseItem(); setId(transation.id) }}
                                 >
                                     <img src={GarbageCan} alt='garbage' />
                                 </button>
+
                             </td>
                         </tr>
                     )}
-                </tbody>
-
-                <div className='container-erase'>
                     <EraseItem
                         openEraseItem={openEraseItem}
                         handleCloseEraseItem={handleCloseEraseItem}
+                        id={id}
                     />
+                </tbody>
+
+                <div className='container-erase'>
+
                 </div>
             </table>
-            <EraseItem
-                openEraseItem={openEraseItem}
-                handleCloseEraseItem={handleCloseEraseItem}
-            />
+
             <RegisterEditing
                 openRegisterEditing={openRegisterEditing}
                 handleCloseEditing={handleCloseEditing}
