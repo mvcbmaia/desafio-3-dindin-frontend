@@ -34,7 +34,6 @@ function EditingProfile({ open, handleCloseProfile }) {
 
             }, { headers: { Authorization: `Bearer ${token}` } })
 
-            console.log(response);
         } catch (error) {
             return console.log(error.message);
         }
@@ -43,8 +42,6 @@ function EditingProfile({ open, handleCloseProfile }) {
     useEffect(() => {
         setName(getItem('nome'))
         setEmail(getItem('email'))
-
-        console.log(getItem('email'))
     }, [])
 
 

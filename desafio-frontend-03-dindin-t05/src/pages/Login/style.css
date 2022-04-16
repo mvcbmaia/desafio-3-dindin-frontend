@@ -1,9 +1,9 @@
 header {
-    margin-bottom: 108px;
+    margin-bottom: 30px;
 }
 
 header img {
-    margin-top: 41px;
+    margin-top: 20px;
     margin-left: 100px;
 }
 
@@ -31,6 +31,7 @@ header img {
     font-weight: 700;
     font-size: 50px;
     line-height: 62px;
+    margin-left: 35px;
 }
 
 .register-container h2 {
@@ -46,23 +47,23 @@ span {
     color: #7978D9;
 }
 
-.btn-register {
-    width: 284px;
-    padding: 15px 30px;
+.btn-register-login {
+    padding: 10px 30px;
     background-color: #7978D9;
     border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 35px;
 }
 
-.btn-register .link {
+.btn-register-login .link {
     text-decoration: none;
     color: white;
     font-family: 'Lato', sans-serif;
-
 }
 
 .login-container {
-    width: 513px;
-    height: 480px;
+    width: 460px;
+    height: 500px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -85,7 +86,7 @@ span {
 .login-container input {
     border: 1px solid #555555;
     border-radius: 5px;
-    width: 449px;
+    width: 400px;
     height: 63px;
 
 
@@ -122,7 +123,7 @@ span {
     background: #7978D9;
     border-radius: 5px;
     padding: 18px 47px;
-    width: 449px;
+    width: 300px;
     color: white;
 
     font-family: 'Lato', sans-serif;

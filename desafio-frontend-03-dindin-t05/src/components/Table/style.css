@@ -36,3 +36,11 @@ td button:first-child {
     border: none;
     background-color: #FAFAFA;
 }
+
+.orange {
+    color: #FA8C10;
+}
+
+.purple {
+    color: #7B61FF;
+}

@@ -10,14 +10,12 @@ function EraseItem({ openEraseItem, handleCloseEraseItem, id }) {
         const token = getItem('token');
 
         try {
-
             await api.delete(`/transacao/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
-
-
+            await window.location.reload(false);
         } catch (error) {
-
+            console.log(error.message);
         }
     }
 

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import api from '../../services/api';
 import { getItem } from '../../utils/storage';
 
-function AddingRegister({ openAddRegirter, handleCloseAddRegister }) {
+function AddingRegister({ openAddRegirter, handleCloseAddRegister, transations }) {
     const [value, setValue] = useState();
     const [category, setCategory] = useState('');
     const [date, setDate] = useState('');
@@ -63,6 +63,7 @@ function AddingRegister({ openAddRegirter, handleCloseAddRegister }) {
                 console.log('Todos os campos são obrigatórios.')
             }
 
+
             if (category === 'Lazer') {
                 category_id = 1;
             } else if (category === 'Salário') {
@@ -71,7 +72,7 @@ function AddingRegister({ openAddRegirter, handleCloseAddRegister }) {
                 category_id = 3;
             } else if (category === 'Mercado') {
                 category_id = 4;
-            } else if (category === 'Assinaturas e Serviçoes') {
+            } else if (category === 'Assinaturas e Serviços') {
                 category_id = 5;
             }
 
@@ -83,6 +84,7 @@ function AddingRegister({ openAddRegirter, handleCloseAddRegister }) {
                 tipo: type
             }, { headers: { Authorization: `Bearer ${token}` } })
             handleCloseAddRegister();
+            await window.location.reload(false);
         } catch (error) {
             console.log(error.message);
         }
@@ -123,7 +125,7 @@ function AddingRegister({ openAddRegirter, handleCloseAddRegister }) {
                             </div>
                             <div className='input-category'>
                                 <label>Categoria</label>
-                                <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                                <select selected={firstCategory} value={category} onChange={(e) => setCategory(e.target.value)}>
                                     <option>{firstCategory}</option>
                                     <option>{secondCategory}</option>
                                     <option>{thirdCategory}</option>

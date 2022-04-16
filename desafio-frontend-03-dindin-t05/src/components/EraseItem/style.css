@@ -6,7 +6,7 @@
 
 .image {
     position: absolute;
-    background-color: red;
+    right: 140px;
     padding-left: 91px;
     bottom: 3px;
 }
@@ -17,7 +17,7 @@
     background-color: #E4F2FD;
     border-radius: 4px;
     position: absolute;
-    left: 735px;
+    left: 828px;
 
 }
 

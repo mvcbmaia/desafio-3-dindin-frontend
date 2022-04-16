@@ -7,7 +7,7 @@ import { getItem } from '../../utils/storage';
 
 
 function Resume() {
-    const [openAddRegirter, setOpenAddRegister] = useState(false);
+    const [openAddRegister, setOpenAddRegister] = useState(false);
     const [enter, setEnter] = useState('');
     const [exit, setExit] = useState('');
 
@@ -56,7 +56,7 @@ function Resume() {
                     </div>
                     <div className='divide'></div>
                     <div className='container-total'>
-                        <h3>Saldo</h3> <h3 className='value-total'>{enter - exit}</h3>
+                        <h3>Saldo</h3> <h3 className='value-total'>R${((enter - exit) / 100).toFixed(2)}</h3>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@ function Resume() {
                 Adicionar Registro
             </button>
             <AddingRegister
-                openAddRegirter={openAddRegirter}
+                openAddRegister={openAddRegister}
                 handleCloseAddRegister={handleCloseAddRegister}
 
             />

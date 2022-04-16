@@ -5,7 +5,7 @@ import GarbageCan from '../../assets/garbage-can.svg';
 import EraseItem from '../EraseItem';
 import RegisterEditing from '../RegisterEditing';
 import { useState } from 'react';
-import { getDay } from 'date-fns';
+import { format, getDay } from 'date-fns';
 import convertDay from '../../utils/convertDay';
 
 
@@ -31,6 +31,10 @@ function Table({ transations }) {
         }
     }
 
+    function handleOrderData(a, b) {
+        return a.data - b.data;
+    }
+
     function handleOpenEditing() {
         setOpenRegisterEditing(true);
     }
@@ -47,7 +51,6 @@ function Table({ transations }) {
         setOpenEraseItem(false);
     }
 
-    console.log(transations)
     return (
         <div>
             <table className='table'>
@@ -56,7 +59,7 @@ function Table({ transations }) {
                     <tr>
                         <th>
                             Data
-                            <button className='btn-top'><img src={Top} alt='top' /></button>
+                            <button onClick={() => transations.sort(handleOrderData)} className='btn-top'><img src={Top} alt='top' /></button>
                         </th>
                         <th>Dia da Semana</th>
                         <th>Descrição</th>
@@ -72,11 +75,11 @@ function Table({ transations }) {
                             <td>{convertDay(getDay(new Date(transation.data.split('T03:00:00.000Z'))))}</td>
                             <td>{transation.descricao}</td>
                             <td>{categoria}</td>
-                            <td>{transation.valor}</td>
+                            <td className={transation.tipo = 'saida' ? 'orange' : 'purple'}>R${((transation.valor) / 100).toFixed(2)}</td>
                             <td>
                                 <button
                                     className='btn btn-pen'
-                                    onClick={handleOpenEditing}
+                                    onClick={() => { handleOpenEditing(); setId(transation.id) }}
                                 >
                                     <img src={Pen} alt='pen' />
                                 </button>
@@ -95,17 +98,17 @@ function Table({ transations }) {
                         handleCloseEraseItem={handleCloseEraseItem}
                         id={id}
                     />
+                    <RegisterEditing
+                        openRegisterEditing={openRegisterEditing}
+                        handleCloseEditing={handleCloseEditing}
+                        id={id}
+                    />
                 </tbody>
 
                 <div className='container-erase'>
 
                 </div>
             </table>
-
-            <RegisterEditing
-                openRegisterEditing={openRegisterEditing}
-                handleCloseEditing={handleCloseEditing}
-            />
         </div>
     )
 }
