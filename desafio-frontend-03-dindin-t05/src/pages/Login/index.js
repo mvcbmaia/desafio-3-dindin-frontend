@@ -30,7 +30,6 @@ export default function Login() {
       setItem('nome', nome);
       setItem('email', emailUsuario);
 
-      console.log(emailUsuario)
       navigate('/transacao');
 
 
@@ -63,7 +62,7 @@ export default function Login() {
         <div className='register-container'>
           <h1>Controle suas <span>finanças</span>, sem planilha chata.</h1>
           <h2>Organizar as suas finanças nunca foi tão fácil, com o DINDIN, você tem tudo num único lugar e em um clique de distância.</h2>
-          <button className='btn-register'>
+          <button className='btn-register-login'>
             <Link className='link' to='/usuario'>Cadastre-se</Link>
           </button>
 

@@ -75,7 +75,7 @@ function Table({ transations }) {
                             <td>{convertDay(getDay(new Date(transation.data.split('T03:00:00.000Z'))))}</td>
                             <td>{transation.descricao}</td>
                             <td>{categoria}</td>
-                            <td>R${((transation.valor) / 100).toFixed(2)}</td>
+                            <td className={transation.tipo = 'saida' ? 'orange' : 'purple'}>R${((transation.valor) / 100).toFixed(2)}</td>
                             <td>
                                 <button
                                     className='btn btn-pen'

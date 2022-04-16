@@ -7,7 +7,7 @@ import { getItem } from '../../utils/storage';
 
 
 function Resume() {
-    const [openAddRegirter, setOpenAddRegister] = useState(false);
+    const [openAddRegister, setOpenAddRegister] = useState(false);
     const [enter, setEnter] = useState('');
     const [exit, setExit] = useState('');
 
@@ -66,7 +66,7 @@ function Resume() {
                 Adicionar Registro
             </button>
             <AddingRegister
-                openAddRegirter={openAddRegirter}
+                openAddRegister={openAddRegister}
                 handleCloseAddRegister={handleCloseAddRegister}
 
             />
