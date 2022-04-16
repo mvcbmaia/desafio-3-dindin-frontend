@@ -1,0 +1,85 @@
+.container-editing {
+    position: fixed;
+    padding: 127px;
+    background-color: rgba(61, 61, 61, 0.48);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    overflow: auto;
+
+}
+
+.modal-input {
+
+    width: 610px;
+    background-color: white;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-self: center;
+}
+
+
+.container-close {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 64px;
+    margin-top: 56px;
+    margin-bottom: 48px;
+}
+
+.container-close img {
+    margin-right: 64px;
+
+}
+
+.cotainer-informations {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    height: 64px;
+    width: 485px;
+}
+
+.container-name {
+    display: flex;
+    flex-direction: column;
+    margin: 0 64px 26px 64px;
+}
+
+.container-email {
+    display: flex;
+    flex-direction: column;
+    margin: 0 64px 26px 64px;
+}
+
+.container-password {
+    display: flex;
+    flex-direction: column;
+    margin: 0 64px 26px 64px;
+}
+
+.container-password-confirmation {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 64px 26px 64px;
+}
+
+.btn-editing-profile {
+    margin-top: 1px;
+    height: 42px;
+    width: 236px;
+    margin-left: 187px;
+    background-color: #7978D9;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 41px;
+
+}

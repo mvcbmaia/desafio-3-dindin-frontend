@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('../../assets/background-image.svg');
+}
+
+.container-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: 100px;
+
+}
+
+.container-register-center {
+    display: flex;
+    justify-content: center;
+}
+
+.container-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    width: 400px;
+    height: 600px;
+}
+
+.container-register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-email {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-password {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-confirm-password {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-register input {
+    width: 240px;
+    height: 40px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    margin-bottom: 33px;
+
+    padding: 10px;
+
+}
+
+.btn-register {
+    background: #7978D9;
+    border-radius: 5px;
+    padding: 11px 47px;
+    width: 150px;
+    height: 20px;
+    color: white;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    margin-bottom: 8px;
+}
+
+form label {
+    margin-bottom: 8px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #484848;
+}
+
+.container-register h1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: #7978D9;
+}
+
+.link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #7B61FF;
+    margin-bottom: 30px;
+}

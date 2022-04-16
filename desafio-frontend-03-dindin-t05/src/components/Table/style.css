@@ -1,0 +1,46 @@
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+th,
+td {
+    padding: 20px 28px;
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+tr td:first-child,
+tr th:first-child {
+    text-align: left;
+}
+
+tr td:last-child {
+    display: flex;
+    align-items: center;
+}
+
+td button:first-child {
+    margin-right: 16px;
+}
+
+.btn-top {
+    border: none;
+    background-color: #FAFAFA;
+}
+
+.orange {
+    color: #FA8C10;
+}
+
+.purple {
+    color: #7B61FF;
+}

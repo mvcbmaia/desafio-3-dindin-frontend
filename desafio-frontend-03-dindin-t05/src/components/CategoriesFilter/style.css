@@ -1,0 +1,72 @@
+.container-categories-filter {
+    height: 220px;
+    width: 880px;
+    background-color: #FAFAFA;
+    margin-left: 106px;
+    margin-bottom: 50px;
+    margin-top: 8px;
+    padding: 1px;
+}
+
+.categories {
+    width: 270px;
+    margin: 20px 30px;
+}
+
+.categories button {
+    all: unset;
+    margin: 10px;
+    padding: 5px;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+
+    color: #000000;
+}
+
+.btns-filter {
+    margin-left: 36px;
+}
+
+.btns-filter button {
+
+    padding: 6px 5px;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-right: 15px;
+
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    padding-left: 8px;
+}
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 14px;
+
+    color: #B9B9B9;
+
+    margin-top: 32px;
+    margin-left: 36px;
+}
+
+.clean-filter {
+    all: unset;
+    background: #FAFAFA;
+    color: #000000;
+}
+
+.app-filter {
+    all: unset;
+    background-color: #7978D9;
+    color: white;
+}
